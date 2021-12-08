@@ -16,7 +16,7 @@ class _MyFavFruitState extends State<MyFavFruit> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-              'My Favorite Fruit is ' + Provider.of<Favorites>(context).myFav),
+              'My Favorite Fruit is ${Provider.of<Favorites>(context).myFav == null ? '' : Provider.of<Favorites>(context).myFav}'),
         ),
         body: Center(
           child: Column(
